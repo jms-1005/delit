@@ -77,10 +77,11 @@
 
 <!-- Images -->
 <div class="row">
-  <div class="col-4" *ngFor="let image of images">
-    <img [src]="'/assets/' + image" alt="" style="width:150px"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+  <div class="col-2" *ngFor="let image of images; let i = index">
+    <img [src]="'/assets/' + image" alt="" style="width:150px"  data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal'+i">
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" [id]="'exampleModal' + i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -98,6 +99,7 @@
     </div>
     </div>
   </div>
+
 </div>
 
 </div>
