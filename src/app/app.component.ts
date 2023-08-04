@@ -1,11 +1,6 @@
 import { Component, HostBinding } from '@angular/core';
 import { trigger, transition, animate, style, query, stagger, group} from '@angular/animations';
 import { environment } from 'src/environments/environment';
-import { ChildrenOutletContexts } from '@angular/router';
-
-
-
-
 
 @Component({
   selector: 'app-root',
@@ -30,11 +25,9 @@ export class AppComponent {
   title = 'delit';
   host = environment.server;
 
-  constructor(private contexts: ChildrenOutletContexts) { }
+  constructor() { }
 
-  getRouteAnimationData() {
-    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
-  }
+
 
   getState(outlet:any) {
     // Changing the activatedRouteData.state triggers the animation
