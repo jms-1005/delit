@@ -1,0 +1,103 @@
+<div class="container">
+
+
+
+<h1>Flash Box</h1>
+
+<!-- <img src="/assets/bg1.jpg" alt="">
+
+<a id="fbplus_01" href="/assets/bg1.jpg" fancyboxable></a> -->
+
+<!-- <a id="fbplus_03" href="/assets/bg1.jpg" >
+  <fancybox box-for="fbplus_03"  options="{href:'/assets/bg1.jpg', title:'A nice fancybox' }" /> -->
+
+  <form class="w-50">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email_" #email_="ngModel" [(ngModel)]="email" pattern="^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{1,}$" required>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <div class="alert alert-danger"  *ngIf="email_.touched && email_.invalid">
+        <div>
+          Some error message
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <!-- <button type="button" class="btn btn-info btn-lg" (click)="openModal()">click to open</button>
+  <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+       <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                   <div class="modal-header">
+                         <h4 class="modal-title">Model Title</h4>
+                         <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                       </div>
+              <div class="modal-body">
+                         <p>Model body text</p>
+                       </div>
+                   <div class="modal-footer">
+                         <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
+                       </div>
+          </div>
+           </div>
+</div> -->
+
+ <!-- Button trigger modal -->
+ <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ Launch demo modal
+</button> -->
+<!-- <img src="/assets/bg1.jpg" alt="" style="width:150px"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLabel">Hey Bootstrap 5!!</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body">
+      Therichpost.com
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-warning" data-bs-
+      dismiss="modal">Close</button>
+     </div>
+   </div>
+ </div>
+</div> -->
+
+<!-- Images -->
+<div class="row">
+  <div class="col-4" *ngFor="let image of images">
+    <img [src]="'/assets/' + image" alt="" style="width:150px"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLabel">Hey Bootstrap 5!!</h5> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <img [src]="'/assets/' + image" alt="" style="width:100%">
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-
+          dismiss="modal">Close</button>
+        </div> -->
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+</div>
